@@ -1,10 +1,15 @@
-import { Button, useColorMode } from "@chakra-ui/react"
+import { IconButton, useColorMode } from "@chakra-ui/react"
+import {MdDarkMode, MdLightMode} from "react-icons/md"
 
 export const ButtonDarkMode = () => {
     const { colorMode, toggleColorMode } = useColorMode()
     return (
-        <Button onClick={toggleColorMode}>
-            Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
-        </Button>
+        <IconButton
+            variant="ghost"
+            size="lg"
+            onClick={toggleColorMode} 
+            aria-label="Button Dark Mode" 
+            icon={colorMode === 'dark' ? <MdDarkMode/> : <MdLightMode />}>
+        </IconButton>
     )
 }

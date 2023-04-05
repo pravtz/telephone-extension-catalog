@@ -1,0 +1,18 @@
+{
+    "6344":{
+        "extension": 6344,
+        "prefix_phone": 3288,
+        "floor": "primeiro",
+        "building": "central",
+        "room": "12",
+        "departament":"administrativo",
+        "sigla_departament": "",
+        "division":"divisão de serviços complementares",
+        "sigla_division":"DSC",
+        "session":"",
+        "description_active":"",
+
+        "value_name":["telefonia"]
+
+    }
+}

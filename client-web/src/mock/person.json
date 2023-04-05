@@ -1,0 +1,28 @@
+{
+    "Ederson": {
+        "permission": "admin",
+        "first_name":"Ederson",
+        "last_name:":"Oliveira Pravtz",
+        "role": ["Técnico em Telecomunicação","Telefonia","Técnico"],
+        "phone": "51983599588",
+        "hide_phone": true,
+        "email": "ederson.ufrgs@gmail.com",
+        "hide_email": true,
+        "personal_extension": 6344,
+        "hide_personal_extension": false,
+        "attendant_extencion": 6344
+    },
+    "Fulano": {
+        "permission": "user",
+        "first_name":"Fulano",
+        "last_name:":"Silva",
+        "role": ["administrativo"],
+        "phone": "",
+        "hide_phone": true,
+        "email": "fulano_silva@fake.com",
+        "hide_email": false,
+        "personal_extension": 6255,
+        "hide_personal_extension": false,
+        "attendant_extencion": 6344
+    }
+}
