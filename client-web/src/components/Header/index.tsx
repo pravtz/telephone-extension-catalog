@@ -1,4 +1,4 @@
-import { Avatar, Box, Flex, Text, useColorMode, useColorModeValue } from "@chakra-ui/react"
+import { Box, Flex, Link, Text, useColorMode, useColorModeValue } from "@chakra-ui/react"
 import { ButtonDarkMode } from "../ButtonDarkMode";
 import { AvatarMenu } from "../AvatarMenu";
 
@@ -7,6 +7,7 @@ type HeaderProps = {
 }
 
 export const Header = ({ title }: HeaderProps) => {
+    const isLogged = true
 
     const bg = useColorModeValue('#eee', '#252525');
     const borderBox = useColorModeValue("#ddd", 'whiteAlpha.200')
@@ -15,8 +16,13 @@ export const Header = ({ title }: HeaderProps) => {
         <Flex h="80px" w="full" justify="space-between" borderBottom='1px' bg={bg} borderColor={borderBox} align="center" >
             <Text>{title}</Text>
             <Box>
-                <AvatarMenu />
-                <ButtonDarkMode />
+                { isLogged 
+                    ?  <AvatarMenu /> 
+                    : <>
+                        <Link>Login</Link>
+                        <ButtonDarkMode />
+                    </>
+                }
             </Box>
         </Flex >
     )
