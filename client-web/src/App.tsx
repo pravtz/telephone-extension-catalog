@@ -1,12 +1,15 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Container } from "@chakra-ui/react";
+import { BoxContent } from "./components/BoxContent";
 import { Layout } from "./components/layout";
 
 function App() {
   return (
     <Layout>
-      <Box>
-        <Text>This is page start</Text>
-      </Box>
+      <Container>
+        <BoxContent>
+          <Text>This is test</Text>
+        </BoxContent>
+      </Container>
     </Layout>
   );
 }
