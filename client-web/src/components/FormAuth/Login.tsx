@@ -16,7 +16,6 @@ type LoginProps = {
 }
 
 export const Login = ({ login }: LoginProps) => {
-
     const { register, handleSubmit, formState: { errors }, reset } = useForm<LoginType>({
         criteriaMode: 'all',
         mode: 'all',
@@ -24,16 +23,13 @@ export const Login = ({ login }: LoginProps) => {
     })
 
     const onSubmit = async ({ email, pass }: LoginType) => {
-
         await login(email, pass);
         reset();
     }
 
     return (
         <Flex direction='column'>
-
             <Box as="form" onSubmit={handleSubmit(onSubmit)} display='flex' flexDirection="column" gap="4">
-
                 <FormControl isInvalid={!!errors.email} >
                     <FormLabel>Email</FormLabel>
                     <Input type="email" {...register('email')} />
@@ -44,7 +40,6 @@ export const Login = ({ login }: LoginProps) => {
                     <Input type="password"  {...register('pass')} />
                     <FormErrorMessage>{errors.pass?.message}</FormErrorMessage>
                 </FormControl>
-
                 <Button border='1px solid' w='full' type="submit">Entrar</Button>
             </Box>
         </Flex>

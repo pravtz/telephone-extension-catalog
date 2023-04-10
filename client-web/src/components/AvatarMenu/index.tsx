@@ -14,9 +14,10 @@ import {
 
 import { MdPersonAdd, MdPhone, MdPerson, MdLogout } from "react-icons/md";
 import {MdDarkMode, MdLightMode} from "react-icons/md"
-
+import { useUserAuth } from "../../hooks/useUserAuth";
 
 export const AvatarMenu = () => {
+  const props = useUserAuth()
   const { colorMode, toggleColorMode } = useColorMode()
   const bg = useColorModeValue('#eee', '#252525');
   return (
@@ -35,7 +36,7 @@ export const AvatarMenu = () => {
           {colorMode === "dark" ? "Dark Ativo": "Light Ativo"}
         </MenuItem>
         <MenuDivider />
-        <MenuItem  bg="inherit" icon={<MdLogout/>}>Sair</MenuItem>
+        <MenuItem onClick={()=>props?.signOutEmail()}  bg="inherit" icon={<MdLogout/>}>Sair</MenuItem>
 
       </MenuList>
     </Menu>
