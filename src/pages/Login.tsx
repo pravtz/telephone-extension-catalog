@@ -20,7 +20,7 @@ const LoginPage = () => {
         <Flex direction="column">
 
             {props?.isLogIn() && (
-                <Navigate to="/app" replace={true} />
+                <Navigate to="/app" replace={false} />
             )}
             <Login login={handlerSubmit} />
         </Flex>

@@ -5,6 +5,7 @@ import AppLayout from "./Layout/app.layout";
 import HomePage from "./pages/Home";
 import MyProfile from "./pages/MyProfile";
 import ErrorPage from "./pages/error-page";
+import { ProtectedRoute } from "./components/ProtectedRoute";
 
 export const RouterMain = createBrowserRouter([
   {
@@ -24,11 +25,11 @@ export const RouterMain = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: (<ProtectedRoute><HomePage /></ProtectedRoute>),
       },
       {
         path: "profile",
-        element: <MyProfile />,
+        element: <ProtectedRoute><MyProfile /></ProtectedRoute>,
       },
     ],
   },

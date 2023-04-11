@@ -1,6 +1,8 @@
 import { Box, Flex, Link, Text, useColorMode, useColorModeValue } from "@chakra-ui/react"
 import { ButtonDarkMode } from "../ButtonDarkMode";
 import { AvatarMenu } from "../AvatarMenu";
+import { Link as LinkRouter } from "react-router-dom";
+
 
 type HeaderProps = {
     title: string
@@ -14,7 +16,7 @@ export const Header = ({ title }: HeaderProps) => {
 
     return (
         <Flex h="80px" w="full" justify="space-between" borderBottom='1px' bg={bg} borderColor={borderBox} align="center" >
-            <Text>{title}</Text>
+            <Link to="/app" as={LinkRouter}>{title}</Link>
             <Box>
                 { isLogged 
                     ?  <AvatarMenu /> 
