@@ -1,14 +1,14 @@
-import { Box, Text, Container } from "@chakra-ui/react";
+import { Text, Container } from "@chakra-ui/react";
 import { BoxContent } from "../components/BoxContent";
 
 const HomePage = () => {
-    return (
+  return (
     <Container>
-        <BoxContent>
-          <Text>This is test</Text>
-        </BoxContent>
-      </Container>
-    )
+      <BoxContent>
+        <Text>This is test</Text>
+      </BoxContent>
+    </Container>
+  )
 }
 
 export default HomePage

@@ -1,11 +1,9 @@
 import { Box, useColorModeValue } from "@chakra-ui/react"
 import { Header } from "../components/Header"
-import { Outlet} from "react-router-dom"
-import { useUserAuth } from "../hooks/useUserAuth"
-
+import { Outlet } from "react-router-dom"
 
 const AppLayout = () => {
-    const props = useUserAuth()
+
     const bg = useColorModeValue('whiteAlpha.500', 'blackAlpha.900')
 
     console.log("layout carregando...")

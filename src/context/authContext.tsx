@@ -6,12 +6,12 @@ import {app} from "../lib/firebaseConfig"
 
 export type userAuthContenxtType = {
     user: User | null
-    loading: Boolean,
+    loading: boolean,
     createUserWithEmailAndPass: (fullName: string, email: string, password: string) => void,
     signInEmail: (email: string, pass: string) => void,
     signOutEmail: () => void,
     getUser: () => void,
-    isLogIn: () => Boolean,
+    isLogIn: () => boolean,
 }
 
 const userAuthContext = createContext<userAuthContenxtType | null>(null)

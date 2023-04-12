@@ -2,7 +2,7 @@ import { Flex } from "@chakra-ui/react"
 import { useUserAuth } from "../hooks/useUserAuth";
 import { Login } from "../components/FormAuth/Login"
 import { Navigate } from "react-router-dom";
-import { useState } from "react";
+
 
 
 const LoginPage = () => {
@@ -10,7 +10,7 @@ const LoginPage = () => {
 
     const handlerSubmit = (email: string, pass: string) => {
         try {
-            props?.signInEmail(email,pass)
+            props?.signInEmail(email, pass)
         } catch (error) {
             console.error(error)
         }

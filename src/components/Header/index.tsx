@@ -1,4 +1,4 @@
-import { Box, Flex, Link, Text, useColorMode, useColorModeValue } from "@chakra-ui/react"
+import { Box, Flex, Link, useColorModeValue } from "@chakra-ui/react"
 import { ButtonDarkMode } from "../ButtonDarkMode";
 import { AvatarMenu } from "../AvatarMenu";
 import { Link as LinkRouter } from "react-router-dom";
@@ -18,8 +18,8 @@ export const Header = ({ title }: HeaderProps) => {
         <Flex h="80px" w="full" justify="space-between" borderBottom='1px' bg={bg} borderColor={borderBox} align="center" >
             <Link to="/app" as={LinkRouter}>{title}</Link>
             <Box>
-                { isLogged 
-                    ?  <AvatarMenu /> 
+                {isLogged
+                    ? <AvatarMenu />
                     : <>
                         <Link>Login</Link>
                         <ButtonDarkMode />
