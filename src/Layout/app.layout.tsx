@@ -10,7 +10,7 @@ const AppLayout = () => {
     return (
         <Box display='flex' flexDirection='column' bg={bg} h="100vh">
             <Header title="Welcome" />
-            <Box width='100vw' >
+            <Box height={'calc(100vh - 80px)'} width='100vw' p="4" >
                 <Outlet />
             </Box>
         </Box>
